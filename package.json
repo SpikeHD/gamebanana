@@ -5,6 +5,13 @@
   "repository": "https://github.com/SpikeHD/gamebanana.git",
   "author": "spikegd <spikegdofficial@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "gamebanana",
+    "game banana",
+    "api",
+    "wrapper",
+    "async"
+  ],
   "dependencies": {
     "got": "^11.8.2"
   },
