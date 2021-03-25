@@ -7,6 +7,8 @@ class Base {
   constructor() {
     this.got = instance
   }
+
+  static getInstance() { return instance }
 }
 
 module.exports = Base

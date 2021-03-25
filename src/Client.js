@@ -17,6 +17,9 @@ class Client extends Base {
     this.appid = opts.appid
     this.userid = opts.userid
     this.token = null
+
+    // Classes for static functions
+    this.Item = Item
   }
 
   /**
@@ -37,42 +40,6 @@ class Client extends Base {
     this.token = JSON.parse(res.body)[0]
 
     return this
-  }
-
-  /**
-   * Get allowed item types.
-   */
-  async allowedItemTypes() {
-    const res = await this.got.get('Core/Item/Data/AllowedItemTypes')
-
-    return JSON.parse(res.body)
-  }
-
-  /**
-   * Get allowed item fields.
-   * 
-   * @param {String} itemtype
-   */
-  async allowedFields(itemtype) {
-    const res = await this.got.get('Core/Item/Data/AllowedFields', {
-      searchParams: {
-        itemtype
-      }
-    })
-  
-    return JSON.parse(res.body)
-  }
-
-  /**
-   * Get an item.
-   * 
-   * @param {Object} opts 
-   * @param {String} opts.itemtype
-   * @param {String|Number} opts.itemid
-   * @param {Array} opts.fields
-   */
-  async getItem(opts) {
-    return new Item(opts).data()
   }
 }
 
