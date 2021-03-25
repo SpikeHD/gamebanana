@@ -24,9 +24,12 @@ class Client extends Base {
    * @param {String=} api_key 
    */
   async login(api_key = this.api_key) {
-    const res = await this.got.get(`/Core/App/Authenticate?api_password=${api_key}&app_id=${this.appid}`)
+    const res = await this.got.get(`Core/App/Authenticate?api_password=${api_key}&app_id=${this.appid}&userid=${this.userid}`)
+    
+    // Token is returned in an array for some reason
+    this.token = JSON.parse(res.body)[0]
 
-    console.log(res)
+    return this
   }
 }
 

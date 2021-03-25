@@ -1,6 +1,6 @@
 const got = require('got')
 const instance = got.extend({
-  prefixUrl: 'api.gamebanana.com'
+  prefixUrl: 'https://api.gamebanana.com'
 })
 
 class Base {
