@@ -105,3 +105,4 @@ dist
 
 # Other stuff
 yarn.lock
+package-lock.json
