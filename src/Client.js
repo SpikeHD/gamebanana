@@ -2,6 +2,8 @@ const Base = require('./Base')
 const Item = require('./Item')
 const List = require('./List')
 const Section = require('./Section')
+const New = require('./New')
+const Member = require('./Member')
 
 class Client extends Base {
   /**
@@ -24,6 +26,8 @@ class Client extends Base {
     this.Item = Item
     this.List = List
     this.Section = Section
+    this.New = New
+    this.Member = Member
   }
 
   /**

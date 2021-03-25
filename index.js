@@ -3,5 +3,6 @@ module.exports = {
   Item: require('./src/Item'),
   List: require('./src/List'),
   Section: require('./src/Section'),
-  New: require('./src/New')
+  New: require('./src/New'),
+  Member: require('./src/Member')
 }
