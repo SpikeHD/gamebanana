@@ -1,0 +1,14 @@
+{
+  "name": "gamebanana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SpikeHD/gamebanana.git",
+  "author": "spikegd <spikegdofficial@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^11.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
