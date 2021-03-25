@@ -10,6 +10,8 @@ class Client extends Base {
    * @param {String|Number} opts.userid
    */
   constructor(opts) {
+    super()
+
     this.api_key = opts.api_key
     this.appid = opts.appid
     this.userid = opts.userid
