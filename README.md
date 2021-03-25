@@ -1,3 +1,5 @@
+![https://github.com/SpikeHD/gamebanana](https://img.shields.io/github/package-json/v/SpikeHD/gamebanana) ![https://github.com/SpikeHD/gamebanana](https://img.shields.io/david/SpikeHD/gamebanana) ![https://www.npmjs.com/package/gamebanana](https://img.shields.io/npm/dw/gamebanana)
+
 # GameBanana
 
 Async API wrapper for Gamebanana, written for NodeJS.
