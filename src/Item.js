@@ -19,10 +19,10 @@ class Item extends Base {
   }
   
   /**
-     * Get allowed item fields.
-     * 
-     * @param {String} itemtype
-     */
+   * Get allowed item fields.
+   * 
+   * @param {String} itemtype
+   */
   static async allowedFields(itemtype) {
     const res = await Base.getInstance().get('Core/Item/Data/AllowedFields', {
       searchParams: {
@@ -34,17 +34,20 @@ class Item extends Base {
   }
   
   /**
-     * Get an item.
-     * 
-     * @param {Object} opts 
-     * @param {String} opts.itemtype
-     * @param {String|Number} opts.itemid
-     * @param {Array} opts.fields
-     */
+   * Get an item.
+   * 
+   * @param {Object} opts 
+   * @param {String} opts.itemtype
+   * @param {String|Number} opts.itemid
+   * @param {Array} opts.fields
+   */
   static async getItem(opts) {
     return await new Item(opts).data()
   }
 
+  /**
+   * Retrieve data.
+   */
   async data() {
     const res = await this.got.get('Core/Item/Data', {
       searchParams: {
