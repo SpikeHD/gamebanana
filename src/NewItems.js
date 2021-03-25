@@ -1,8 +1,8 @@
 const Base = require('./Base')
 
-class New extends Base {
+class NewItems extends Base {
   /**
-   * New submissions.
+   * NewItems submissions.
    * 
    * @param {Object} opts 
    * @param {String} opts.page
@@ -35,7 +35,7 @@ class New extends Base {
   }
 
   /**
-   * New submissions.
+   * NewItems submissions.
    * 
    * @param {Object} opts 
    * @param {String} opts.page
@@ -46,8 +46,8 @@ class New extends Base {
    * @param {String=|Number=} opts.max_age
    * @param {String=} opts.include_updated
    */
-  static async getNew(opts) {
-    return await new New(opts).data()
+  static async getNewItems(opts) {
+    return await new NewItems(opts).data()
   }
 
   async data() {
@@ -68,4 +68,4 @@ class New extends Base {
   }
 }
 
-module.exports = New
+module.exports = NewItems

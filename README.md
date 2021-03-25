@@ -121,22 +121,22 @@ const section = new Section({
 const results = await section.data()
 ```
 
-### Initializing a New submissions query
+### Initializing a NewItems submissions query
 
 ```js
-const submissions = await client.New.getNew({
+const submissions = await client.NewItems.getNewItems({
   page: 1
 })
 
 // OR with the class directly
 
-const { New } = require('gamebanana')
+const { NewItems } = require('gamebanana')
 
-const submissions = new New({
+const submissions = new NewItems({
   page: 1
 })
 
-const results = await new.data()
+const results = await submissions.data()
 ```
 
 ### Initializing a Member
