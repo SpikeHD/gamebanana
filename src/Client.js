@@ -1,6 +1,7 @@
 const Base = require('./Base')
 const Item = require('./Item')
 const List = require('./List')
+const Section = require('./Section')
 
 class Client extends Base {
   /**
@@ -22,6 +23,7 @@ class Client extends Base {
     // Classes for static functions
     this.Item = Item
     this.List = List
+    this.Section = Section
   }
 
   /**
