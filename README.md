@@ -8,6 +8,7 @@ Async API wrapper for Gamebanana, written for NodeJS.
 * [Quick-start](#quick-start)
 * [Documentation](#documentation)
 * [Examples](#examples)
+* [Contributing](#contributing)
 
 # Installation
 
@@ -75,7 +76,7 @@ const data = await item.data()
 ### Initializing a List query
 
 ```js
-const item = await client.List.list({
+const list = await client.List.list({
   itemtype: 'type',
   field: 'field',
   query: 'searchquery'
@@ -97,7 +98,7 @@ const results = await list.data()
 ### Initializing a Section query
 
 ```js
-const item = await client.Section.list({
+const section = await client.Section.list({
   itemtype: 'type',
   sort: 'sort',
   direction: 'desc',
@@ -117,3 +118,55 @@ const section = new Section({
 
 const results = await section.data()
 ```
+
+### Initializing a New submissions query
+
+```js
+const submissions = await client.New.getNew({
+  page: 1
+})
+
+// OR with the class directly
+
+const { New } = require('gamebanana')
+
+const submissions = new New({
+  page: 1
+})
+
+const results = await new.data()
+```
+
+### Initializing a Member
+
+```js
+// Via ID
+const member = await client.Member.findByID({
+  userid: 1
+})
+
+// Via username
+const member = await client.Member.findByName({
+  username: 'myuser'
+})
+
+// OR with the class directly
+
+const { Member } = require('gamebanana')
+
+// With ID
+const member = new Member({
+  userid: 1
+})
+
+// With username
+const member = new Member({
+  username: 'myuser'
+})
+
+const results = await member.find()
+```
+
+# Contributing
+
+Issues, PRs, etc. are all welcome!
