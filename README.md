@@ -46,6 +46,10 @@ TODO (too lazy rn, just look at JSDocs for now)
 ```js
 const { Client } = require('gamebanana')
 
+// Without an API key, since it's not required
+const client = new Client()
+
+// With an API key n' stuff (for client.login())
 const client = new Client({
   api_key: 'myapikey',
   userid: 'myuserid',

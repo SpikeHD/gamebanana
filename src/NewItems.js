@@ -13,7 +13,7 @@ class NewItems extends Base {
    * @param {String=|Number=} opts.max_age
    * @param {String=} opts.include_updated
    */
-  constructor(opts) {
+  constructor(opts = {}) {
     super()
 
     this.page = opts.page

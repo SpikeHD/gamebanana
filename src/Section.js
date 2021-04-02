@@ -13,7 +13,7 @@ class Section extends Base {
    * @param {String=} opts.filterval
    * @param {String=} opts.filterop
    */
-  constructor(opts) {
+  constructor(opts = {}) {
     super()
 
     this.itemtype = opts.itemtype

@@ -9,7 +9,7 @@ class Like extends Base {
    * @param {String} opts.field
    * @param {String} opts.query
    */
-  constructor(opts) {
+  constructor(opts = {}) {
     super()
 
     this.itemtype = opts.itemtype

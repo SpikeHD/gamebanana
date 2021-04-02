@@ -8,7 +8,7 @@ class Member extends Base {
    * @param {String=|Number=} userid
    * @param {String=} username 
    */
-  constructor(opts) {
+  constructor(opts = {}) {
     super()
 
     this.userid = opts.userid

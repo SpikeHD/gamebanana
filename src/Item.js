@@ -1,7 +1,7 @@
 const Base = require('./Base')
 
 class Item extends Base {
-  constructor(opts) {
+  constructor(opts = {}) {
     super()
 
     Object.keys(opts).forEach(k => {
